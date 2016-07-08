@@ -160,10 +160,10 @@ function addObject(name) {
 
 //添加随机数量刹车和滑板
 function addRandomBrake() {
-	var num = randowNum(1,5);
+	var num = randomNum(1,5);
 	for(var i = 0; i < num; i++) {
-		brakeTimers.push( window.setTimeout(function(){addObject("brake")},randowNum(10000,100000)) );
-		skateTimers.push( window.setTimeout(function(){addObject("skate")},randowNum(5000,100000)) );
+		brakeTimers.push( window.setTimeout(function(){addObject("brake")},randomNum(10000,100000)) );
+		skateTimers.push( window.setTimeout(function(){addObject("skate")},randomNum(5000,100000)) );
 	}		 
 }
 //输出信息
@@ -199,14 +199,14 @@ function randomPointer(startX,startY,endX,endY) {
 	endX = endX || WIDTH;
 	endY = endY || HEIGHT;
 	var p = [],
-		x = Math.floor(Math.random()*(endX - startX)) + startX,
-		y = Math.floor(Math.random()*(endY - startY)) + startY;
+		x = randomNum(startX,endX);
+		y = randomNum(startY,endY);				
 	if(carrier[x][y]) return randomPointer(startX,startY,endX,endY);
 	p[0] = x;
 	p[1] = y;
 	return p;
 }
 //产生随机整数
-function randowNum(start,end) {
+function randomNum(start,end) {
 	return Math.floor(Math.random()*(end - start)) + start;
 }
