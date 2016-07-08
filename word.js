@@ -1,87 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>作品Demo</title>
-<style type="text/css">
-* {
-	margin:0;
-	padding:0
-}
-body {
-	background:#333;
-	-moz-user-select:none;
-	text-align:center;
-	font-size:12px
-}
-table {
-	margin:80px auto 10px auto;
-	overflow:hidden;
-	border-collapse:collapse;
-}
-td {
-	width:20px;
-	height:20px;
-	border:1px solid #eee;
-	background:#f4f4f4
-}
-.cover {
-	background:#39c;
-}
-.food {
-	background:#093
-}
-.block {
-	background:#333
-}
-.brake {
-	background:#f00
-}
-.skate {
-	background:#00f
-}
-#say {
-	margin-top:50px;
-	color:white
-}
-#help {
-	width:420px;
-	margin:0 auto;
-	line-height:17px;
-	color:white
-}
-#help span {
-	float:left;
-	margin-right:10px
-}
-#help .box {
-	width:15px;
-	height:15px;
-	margin-right:5px;
-	border:1px solid white
-}
-#btnStart {
-	clear:both;
-	width:100px;
-	height:30px;
-	margin-top:10px;
-	padding:0;
-	background:#bbb;
-	color:#222;
-	border:1px solid #fff;
-	border-bottom-color:#000;
-	border-right-color:#000;
-	cursor:pointer
-}
-</style>
-<style type="text/css">
-div#cs_left_couplet, div#cs_right_couplet, .w720, .sif_r {
-	display:none !important;
-}
-</style>
-<script src="http://push.zhanzhang.baidu.com/push.js"></script>
-<script src="//hm.baidu.com/hm.js?ca530285b593ad370c84521aaa2b9520"></script>
-<script type="text/javascript">
+// JavaScript Document
 // common 
 function $(str) {
 	return document.getElementById(str);
@@ -240,6 +157,7 @@ function addObject(name) {
 	carrier[p[0]][p[1]] = name;
 	gridElems[p[0]][p[1]].className = name;
 }
+
 //添加随机数量刹车和滑板
 function addRandomBrake() {
 	var num = randowNum(1,5);
@@ -292,15 +210,3 @@ function randomPointer(startX,startY,endX,endY) {
 function randowNum(start,end) {
 	return Math.floor(Math.random()*(end - start)) + start;
 }
-</script>
-
-</head>
-
-<body  onselectstart="return false">
-<div id="say">GAME OVER</div>
-<div id="snakeWrap"> </div>
-<div id="help"> <span class="box food"></span><span>绿色食物</span> <span class="box block"></span><span>灰色毒品</span> <span class="box skate"></span><span>蓝色滑板</span> <span class="box brake"></span><span>红色刹车</span> <span style="float:right">最高分：<strong id="score">7</strong></span>
-  <input type="button" id="btnStart" value="开始游戏" style="color: rgb(0, 0, 0);">
-</div>
-</body>
-</html>
